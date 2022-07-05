@@ -1,3 +1,26 @@
-1. Cai foundation global, chạy tren version node 12
-2. nvm install 12.22.12
-3. yarn install
+1. Cài đặt foundation global:
+npm install foundation-cli --global
+
+2. Cài node version:
+nvm install 14.0.0
+nvm use 14.0.0
+
+
+3. Tạo project:
+foundation new
+
+4. Run:
+yarn install
+yarn start
+
+5. Chú ý:
+- config.yml và folder src
+
+6. Dự án dùng template engine: 
+https://handlebarsjs.com/guide/partials.html#basic-partials
+
+7. Lưu ý:
+- Layouts chứa nội dung html và các page sẽ được nạp vào
+- pages chứa các link website: /index.html,/about.html
+- partials chứa các thành phần block cần nạp vào pages và layouts
+

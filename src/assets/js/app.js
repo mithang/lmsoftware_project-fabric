@@ -1,26 +1,23 @@
+//Import các thư viên cài bằng npm
 import $ from "jquery";
 import "what-input";
 import { fabric } from "fabric";
 
-// Foundation JS relies on a global variable. In ES6, all imports are hoisted
-// to the top of the file so if we used `import` to import Foundation,
-// it would execute earlier than we have assigned the global variable.
-// This is why we have to use CommonJS require() here since it doesn't
-// have the hoisting behavior.
 window.jQuery = $;
 require("foundation-sites");
 
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
+//Import các thư viên bằng file .js, , min.js
+// import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
+
+
 var canvas = new fabric.Canvas("c");
 
-// canvas.setBackgroundImage(
-//   "http://lorempixel.com/400/400/fashion",
-//   canvas.renderAll.bind(canvas)
-// );
+canvas.setBackgroundImage(
+  "http://lorempixel.com/400/400/fashion",
+  canvas.renderAll.bind(canvas)
+);
 
 $("#text").on("click", function (e) {
   text = new fabric.Text($("#text").val(), { left: 100, top: 100 });
